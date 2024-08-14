@@ -3,19 +3,49 @@
 
 using namespace std;
 
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        unordered_map<char, int> wordCount1;
+        unordered_map<char, int> wordCount2;
+        // initialize the character count
+        for(int i = 0; i < ransomNote.size(); i++) {
+            wordCount1[ransomNote[i]] = 0;
+        }
+        for(int i = 0; i < magazine.size(); i++) {
+            wordCount2[magazine[i]] = 0;
+        }
+        // counting the characters
+        for(int i = 0; i < ransomNote.size(); i++) {
+            wordCount1[ransomNote[i]] = wordCount1[ransomNote[i]] + 1;
+        }
+        for(int i = 0; i < magazine.size(); i++) {
+            wordCount2[magazine[i]] = wordCount2[magazine[i]] + 1;
+        }
+        // check 
+        for(int i = 0; i < ransomNote.size(); i++) {
+            if(!wordCount2.count(ransomNote[i])) {
+                return false;
+            }
+            else {
+                if(wordCount1[ransomNote[i]] <= wordCount2[ransomNote[i]]) {
+                    continue;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+};
+
 int main() {
-    unordered_map<int, char> m;
 
-    m[1] = '1';
-    m[2] = '2';
-    m[3] = '3';
+    string s = "aa";
+    string c = "aab";
 
-    for(auto i = m.begin(); i != m.end(); i++) {
-        cout << i->first << ": " << i->second << endl;
-    }
-
-    string s = "aaa";
-    for(int i = 0; i < s.size(); i++) {
-        cout << s[i] << endl;
-    }
+    Solution sol;
+    // sol.canConstruct(s, c);
+    cout << sol.canConstruct(s, c) << endl;
 }
