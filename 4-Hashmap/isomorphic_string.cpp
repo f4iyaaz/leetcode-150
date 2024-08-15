@@ -5,11 +5,6 @@ using namespace std;
 
 class Solution {
 public:
-    // bool check(unordered_map<char, char> &st, unordered_map<char, char> ts) {
-    //     return true;
-    // }
-    // s can't map more than one characters of t
-    // t can't map more than one characters of s
     bool isIsomorphic(string s, string t) {
         unordered_map<char, char> s_to_t;
         unordered_map<char, char> t_to_s;
