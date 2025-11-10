@@ -1,0 +1,12 @@
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        last_index = len(s) - 1
+        for i in range((len(s)) // 2):
+            first_element = s[i]
+            last_element = s[last_index]
+            s[i] = last_element
+            s[last_index] = first_element
+            last_index -= 1
