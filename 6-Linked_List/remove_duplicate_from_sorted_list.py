@@ -25,3 +25,5 @@ class Solution:
             left.next = None
 
         return head
+        
+# Beats 100% of runtime
