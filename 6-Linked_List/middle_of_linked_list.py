@@ -15,5 +15,5 @@ class Solution:
             
         return tortoise
 
-# Beats 100% of runtimes
-# Beats 83.75% of memories
+# Runtime: Beats 100%
+# Memory: Beats 83.75%
