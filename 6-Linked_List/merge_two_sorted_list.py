@@ -26,4 +26,4 @@ class Solution:
         self.head = dummy.next
         return self.head
 
-  # Beats 100% of runtimes
+  # Runtime: Beats 100%
