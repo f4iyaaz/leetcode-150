@@ -27,5 +27,5 @@ class Solution:
             return head
 
 
-# Runtime: beats 100%
-# Memory: beats 88.42%
+# Runtime: Beats 100%
+# Memory: Beats 88.42%
