@@ -18,6 +18,6 @@ class Solution:
             if slow is fast:
                 return True
         return False
-# Beats 86.83% of runtimes
-# Beats 97.44% of memory
+# Runtime: Beats 86.83%
+# Memory: Beats 97.44%
 # The algorithm is called "Floyd's tortoise and hare" algorithm
