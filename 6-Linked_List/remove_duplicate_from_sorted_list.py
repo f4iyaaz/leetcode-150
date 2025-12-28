@@ -26,4 +26,4 @@ class Solution:
 
         return head
         
-# Beats 100% of runtime
+# Runtime: Beats 100%
