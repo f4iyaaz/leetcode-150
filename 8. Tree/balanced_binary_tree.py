@@ -14,7 +14,7 @@ class Solution:
                 return -1
             right = height(root.right)
             if right == -1:
-                return -1;
+                return -1
             if abs(left - right) > 1:
                 return -1
 
