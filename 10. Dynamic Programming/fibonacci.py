@@ -10,5 +10,5 @@ class Solution:
                 return 0
             memo[n] = fibonacci(n - 1) + fibonacci(n - 2)
             return memo[n]
-        result = fibonacci(n);
+        result = fibonacci(n)
         return result
