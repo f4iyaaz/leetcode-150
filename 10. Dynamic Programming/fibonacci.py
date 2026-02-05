@@ -12,3 +12,6 @@ class Solution:
             return memo[n]
         result = fibonacci(n)
         return result
+
+# Time Complexity: O(n) with memoization
+# Without memoization: 2^n
