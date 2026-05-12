@@ -12,6 +12,5 @@ class Solution:
         
         return is_one
     
-sol = Solution()
-binary_string = "1001"
-print(sol.checkOnesSegment(binary_string))
+# Time complexity: O(n)
+# Beats 100%
