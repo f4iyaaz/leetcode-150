@@ -1,6 +1,13 @@
 class Solution:
     def spiralOrder(self, matrix):
-        return matrix
+        row_length = len(matrix[0])
+        row = len(matrix)
+        dummy_result = []
+        for i in range(row_length):
+            for num in matrix[i]:
+                dummy_result.append(num)
+
+        return dummy_result
 
 sol = Solution()
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
