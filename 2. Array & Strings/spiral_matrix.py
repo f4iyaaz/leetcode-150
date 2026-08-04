@@ -12,8 +12,45 @@ class Solution:
         result = []
         direction = RIGHT
 
-        while result != (m * n):
-            pass
+        while len(result) != (m * n):
+            if direction == RIGHT:
+                while j < RIGHT_WALL:
+                    result.append(matrix[i][j])
+                    j += 1
+                direction = DOWN
+                i += 1
+                j -= 1
+                RIGHT_WALL -= 1
+
+            elif direction == DOWN:
+                while i < DOWN_WALL:
+                    result.append(matrix[i][j])
+                    i += 1
+                direction = LEFT
+                i -= 1
+                j -= 1
+                DOWN_WALL -= 1
+
+            elif direction == LEFT:
+                while j > LEFT_WALL:
+                    result.append(matrix[i][j])
+                    j -= 1
+                direction = UP
+                i -= 1
+                j += 1
+                LEFT_WALL += 1
+
+            elif direction == UP:
+                while i > UP_WALL:
+                    result.append(matrix[i][j])
+                    i -= 1
+                direction = RIGHT
+                i += 1
+                j += 1
+                UP_WALL += 1
+
+        return result
+
 
 sol = Solution()
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
